@@ -58,6 +58,10 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-postgresql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
       <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
@@ -73,9 +77,6 @@
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus.platform.version}</version>
-        <configuration>
-      <debug>6006</debug>
-    </configuration>
         <extensions>true</extensions>
         <executions>
           <execution>
@@ -86,6 +87,9 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <debug>6006</debug>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
